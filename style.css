@@ -1,0 +1,141 @@
+/*|| General styles*/
+
+:root {
+    --yellow: #FEE505;
+    --ochre: #E6B905;
+    --CTAyellow: #FDB812;
+    --CTAorange: #FE7805;
+    --orange: #E68B05;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: seashell;
+    background: white;
+    font-size: 125%; /*20px*/
+    text-align: center;
+
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/*|| Text options*/
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    
+}
+
+h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    padding-left: 2.5rem;
+}
+
+.rotated-heading {
+    border: solid 2px red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+
+
+transform: rotate(-90deg)
+
+}
+
+
+.subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+li a {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+
+    padding: 0.75rem;
+}
+
+.black-text {
+    color: black;
+}
+
+.yellow-text {
+    color: var(--CTAyellow);
+}
+
+
+
+
+/*|| Header section*/
+header {
+width: 100vw;
+height: 100vh;
+background-color: black;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+
+.pageHero {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-side {
+    width: 40vw;
+    height: 100vh;
+    background: linear-gradient(360deg, #FDB812 0%, #FEE505 100%);}
+
+.right-side {
+    width: 60vw;
+    height: 100vh;
+}
