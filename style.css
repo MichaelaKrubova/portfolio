@@ -55,15 +55,15 @@ p {
     padding-left: 2.5rem;
 }
 
-.rotated-heading {
-    border: solid 2px red;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+.about-heading {
+    text-align: end;
 
 
-transform: rotate(-90deg)
+}
+
+.contact-heading {
+    text-align: start;
+    color: white;
 
 }
 
@@ -73,7 +73,6 @@ transform: rotate(-90deg)
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
-    text-transform: uppercase;
 }
 
 
@@ -106,7 +105,6 @@ li a {
 header {
 width: 100vw;
 height: 100vh;
-background-color: black;
 }
 
 
@@ -131,11 +129,14 @@ ul {
 }
 
 .left-side {
-    width: 40vw;
+    width: 50vw;
     height: 100vh;
-    background: linear-gradient(360deg, #FDB812 0%, #FEE505 100%);}
+    background: white;
+}
 
 .right-side {
-    width: 60vw;
+    width: 50vw;
     height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/portfolio960×1080px.jpg);
+
 }
