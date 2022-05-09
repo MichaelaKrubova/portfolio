@@ -1,4 +1,7 @@
 /*|| General styles*/
+.red-border {
+    border: 1px solid red;
+}
 
 :root {
     --yellow: #FEE505;
@@ -20,17 +23,16 @@ body {
 
   .flex-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
+
+
 
 /*|| Text options*/
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     font-weight: 400;
-    text-transform: uppercase;
     margin: 0;
     padding: 0;
 
@@ -52,18 +54,22 @@ h2 {
 
 p {
     font-family: 'Raleway', sans-serif;
-    padding-left: 2.5rem;
+}
+
+.upperCase {
+    text-transform: uppercase;
 }
 
 .about-heading {
+    padding-right: 2.5rem;
     text-align: end;
 
 
 }
 
 .contact-heading {
+    padding-left: 2.5rem;
     text-align: start;
-    color: white;
 
 }
 
@@ -84,9 +90,7 @@ li a {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    color: white;
     text-decoration: none;
-
     padding: 0.75rem;
 }
 
@@ -94,10 +98,27 @@ li a {
     color: black;
 }
 
-.yellow-text {
-    color: var(--CTAyellow);
+.white-text a {
+    color: white;
 }
 
+.white-text {
+    color: white;
+}
+
+/*|| Utilities*/
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 4rem;
+    margin: 4rem 2.5rem;
+
+    border: 0.5rem solid ;
+}
 
 
 
@@ -107,9 +128,16 @@ width: 100vw;
 height: 100vh;
 }
 
+.top-nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+}
 
 
-ul {
+
+.top-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 1rem 2.5rem;
@@ -131,12 +159,27 @@ ul {
 .left-side {
     width: 50vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 50vw;
+    height: 100vh;
     background: white;
 }
 
 .right-side {
     width: 50vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
     background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/portfolio960×1080px.jpg);
+    background-size: cover;
 
 }
