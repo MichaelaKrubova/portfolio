@@ -14,7 +14,6 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    color: seashell;
     background: white;
     font-size: 125%; /*20px*/
     text-align: center;
@@ -25,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
   }
+
 
 
 
@@ -60,27 +60,6 @@ p {
     text-transform: uppercase;
 }
 
-.about-heading {
-    padding-right: 2.5rem;
-    text-align: end;
-
-
-}
-
-.contact-heading {
-    padding-left: 2.5rem;
-    text-align: start;
-
-}
-
-
-.subheading {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
 
 
 
@@ -94,7 +73,8 @@ li a {
     padding: 0.75rem;
 }
 
-.black-text {
+
+.black-text a {
     color: black;
 }
 
@@ -109,16 +89,22 @@ li a {
 /*|| Utilities*/
 
 button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    
+    width: fit-content;
+    height: fit-content;
 
-    padding: 1rem 4rem;
-    margin: 4rem 2.5rem;
+    border: none;
+    border-radius: 0.75rem;
 
-    border: 0.5rem solid ;
+
 }
+
+.white-space {
+    height: 2rem;
+    grid-area: ws;
+}
+
 
 
 
@@ -157,16 +143,14 @@ height: 100vh;
 }
 
 .left-side {
+    
     width: 50vw;
-    height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
 
-    width: 50vw;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) / repeat(6, 1fr);
+
+
     background: white;
 }
 
@@ -182,4 +166,44 @@ height: 100vh;
     background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/portfolio960×1080px.jpg);
     background-size: cover;
 
+}
+
+.about-heading {
+    
+    grid-area: 3 /  2 / 4 / 5;
+
+    text-align: end;
+
+
+}
+
+.contact-heading {
+    grid-area: 3 /  2 / 4 / 6;
+
+    padding-left: 2.5rem;
+    text-align: start;
+
+}
+
+
+.subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+
+.primary-button {
+    background: linear-gradient(180deg, rgba(254, 229, 5, 0.5) 0%, rgba(253, 184, 18, 0.5) 100%);
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.work-button {
+    
+    grid-area: 4 /  4 / 5 / 6;
 }
