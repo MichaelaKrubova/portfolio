@@ -186,6 +186,7 @@ li a {
 
     background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/portfolio960×1080px.jpg);
     background-size: cover;
+    background-position: center;
 
 }
 
@@ -233,6 +234,7 @@ li a {
     
     border: 0.05rem solid #FDB812;
     color: white;
+
     
     
     
@@ -257,6 +259,51 @@ li a {
     font-size: 1.5rem;
 }
 
+/*|| Sections*/
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+section div {
+    width: 50%;
+}
+
+section div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+section div.section-title {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 3rem;
+
+    text-align: left;
+
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
 
 
 
+/*|| Work section*/
+
+.work-title {
+    background: linear-gradient(180deg, #FEE505 0%, #FDB812 100%);}
+
+/*About section*/
+
+.about-title {
+    background: linear-gradient(180deg, #FE7805 0%, #FDB812 0.01%, #FE7805 100%);
