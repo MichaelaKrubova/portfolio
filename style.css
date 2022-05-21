@@ -124,21 +124,31 @@ li a {
 
 /*|| Header section*/
 
-.top-nav {
+nav {
+    
     position: absolute;
-    top: 0;
     width: 100vw;
 
 }
 
-
-
-.top-nav ul {
+.nav-menu {
+    
     list-style-type: none;
     margin: 0;
     padding: 1rem 0;
     display: flex;
     flex-direction: row;
+}
+
+
+
+.top-nav {
+    top: 0;
+}
+
+
+
+.top-nav ul {
     justify-content: flex-end;
 }
 
@@ -296,6 +306,20 @@ section div.section-title {
     top: 0;
 }
 
+.section-nav {
+    
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 50%;
+
+    padding-bottom: 1rem;
+}
+
+
+.section-nav a {
+    color: black;
+}
 
 
 /*|| Work section*/
@@ -307,3 +331,4 @@ section div.section-title {
 
 .about-title {
     background: linear-gradient(180deg, #FE7805 0%, #FDB812 0.01%, #FE7805 100%);
+}
