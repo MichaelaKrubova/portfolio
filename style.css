@@ -45,8 +45,9 @@ h1, h2, h3, h4 {
 
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 400;
+    line-height: 1.8;
     
 }
 
@@ -267,7 +268,7 @@ li a {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /*|| Sections*/
@@ -337,7 +338,7 @@ section div.section-title {
 /*|| Work section*/
 
 .work-title {
-    background:  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/media/code960×1080px.jpg) center;
+    background:  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/media/code-coloured960×1080px.jpg) center;
     background-size: cover;
 
 }
