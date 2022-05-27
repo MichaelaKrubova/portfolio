@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
 
 }
@@ -89,6 +89,10 @@ li a {
     color: white;
 }
 
+.yellow-text {
+    color: var(--CTAyellow);
+}
+
 /*|| Utilities*/
 
 
@@ -124,12 +128,6 @@ li a {
 
 /*|| Header section*/
 
-nav {
-    
-    position: absolute;
-    width: 100vw;
-
-}
 
 .nav-menu {
     
@@ -143,7 +141,10 @@ nav {
 
 
 .top-nav {
+    position: absolute;
+    width: 100vw;
     top: 0;
+    right: 0;
 }
 
 
@@ -194,7 +195,7 @@ nav {
     grid-template: repeat(6, 1fr) / repeat(6, 1fr);
     justify-content: start;
 
-    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/portfolio960×1080px.jpg);
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/man-earth.jpg);
     background-size: cover;
     background-position: center;
 
@@ -276,6 +277,10 @@ section {
     flex-direction: row;
 }
 
+section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 section div {
     width: 50%;
 }
@@ -291,12 +296,11 @@ section div.text {
 
 section div.section-title {
     height: 100vh;
+    display: grid;
+    gap: .5rem;
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    padding: 3rem;
+    padding: 1.5rem 3rem;
 
     text-align: left;
 
@@ -304,31 +308,48 @@ section div.section-title {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+
+    color: white;
+}
+
+
+.section-heading {
+    grid-area: 3 /  1 / 5 / 4;
+    padding-left: 1rem;
 }
 
 .section-nav {
     
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    width: 50%;
+    grid-area: 6 /  1 / 7 / 7;
+    align-self: end;
+}
 
-    padding-bottom: 1rem;
+.section-menu {
+    justify-content: flex-start;
 }
 
 
 .section-nav a {
-    color: black;
+    color: white;
 }
 
 
 /*|| Work section*/
 
 .work-title {
-    background: linear-gradient(180deg, #FEE505 0%, #FDB812 100%);}
+    background:  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/media/code960×1080px.jpg) center;
+    background-size: cover;
+
+}
 
 /*About section*/
 
 .about-title {
-    background: linear-gradient(180deg, #FE7805 0%, #FDB812 0.01%, #FE7805 100%);
+    background:  linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(/media/CartoonMe_1644314905004.jpg) left 15rem center no-repeat;
+    background-size: contain;
+}
+
+.contact-title {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/media/contact\(960×1080px\).jpg) left center no-repeat;
+    background-size: cover;
 }
