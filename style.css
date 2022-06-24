@@ -21,14 +21,14 @@
 }
 
 html {
-    font-size: .8vw;  /*10px*/
+    font-size: 62.5%;  /*10px*/
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background: white;
     text-align: left;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
 
   }
 
@@ -51,24 +51,24 @@ h1, h2, h3, h4 {
 
 
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.4rem, 2vw + 1.25rem, 4rem);
     font-weight: 400;
     line-height: 1.8;
     
 }
 
 h2 {
-    font-size: 5.2rem;
+    font-size: clamp(2rem, 2vw + 1rem, 3.5rem);
     text-transform: uppercase;
 
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.6rem, 1vw + 1rem, 2.4rem);
 }
 
 p {
@@ -81,7 +81,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 1vw + 1rem, 2.2rem);
 
     color: grey;
 }
@@ -126,17 +126,17 @@ li a {
     text-align: center;
     font-family: 'Raleway';
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1em;
     
     width: fit-content;
     height: fit-content;
 
-    border-radius: 0.75rem;
+    border-radius: 0.75em;
 
     white-space: nowrap;
     
-    padding: .75rem 4rem;
-    margin-top: 3rem;
+    padding: .5em 2.5em;
+    margin-top: 1em;
     
     background-color: transparent;
     
@@ -219,25 +219,22 @@ details > p {
     height: 100vh;
 }
 
-.left-side {
-    
+.page-hero > div {
     width: 50vw;
 
     display: grid;
     gap: .5rem;
     grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.left-side {
+    
     justify-content: end;
 
     background: white;
 }
 
 .right-side {
-    width: 50vw;
-    height: 100vh;
-
-    display: grid;
-    gap: .5rem;
-    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
     justify-content: start;
 
     background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(/media/man-earth.jpg);
@@ -401,20 +398,8 @@ section div.section-title {
 
 /*|| Media queries*/
 
-@media (max-width: 480px){
-    body {
-        font-size: 1rem;
-    }
 
-    section {
-        display: block;
-    }
-}
-
-@media (max-width: 768px){
-    body {
-        font-size: 1.4rem;
-    }
+@media (max-width: 900px){
 
     .page-hero {
         display: block;
@@ -424,6 +409,13 @@ section div.section-title {
         
         width: 100%;
         height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
     }
 
     section {
@@ -432,19 +424,18 @@ section div.section-title {
 
     section div {
         width: 100%;
+        height: 50%;
     }
 
     section div.section-title {
         position: static;
+        height: 50%;
+    }
+
+    .nav-menu {
+        display: none;
     }
 
 
 }
 
-
-@media (max-width: 1024px){
-    body {
-        font-size: 100%;
-    }
-    
-}
