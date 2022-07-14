@@ -3,13 +3,6 @@
     border: 1px solid red;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    
-    box-sizing: border-box;
-    }
-
 
 
 :root {
@@ -20,8 +13,19 @@
     --orange: #E68B05;
 }
 
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    
+    box-sizing: inherit;
+    }
+
+
+
 html {
     font-size: 62.5%;  /*10px*/
+    
+    box-sizing: border-box;
 }
 
 body {
@@ -34,7 +38,12 @@ body {
 
   .flex-container {
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .grid-container {
+    display: grid;
+    gap: .5rem;
   }
 
   
@@ -51,14 +60,14 @@ h1, h2, h3, h4 {
 
 
 h1 {
-    font-size: clamp(2.4rem, 2vw + 1.25rem, 4rem);
+    font-size: clamp(2.4rem, 2vw + 1.25rem, 4rem); 
     font-weight: 400;
     line-height: 1.8;
     
 }
 
 h2 {
-    font-size: clamp(2rem, 2vw + 1rem, 3.5rem);
+    font-size: 4rem;
     text-transform: uppercase;
 
 }
@@ -74,6 +83,7 @@ h4 {
 p {
     font-family: 'Raleway', sans-serif;
     padding: .5rem;
+    max-width: 75ch;
 }
 
 
@@ -119,6 +129,11 @@ li a {
     color: var(--CTAyellow);
 }
 
+.orange-text {
+    color: var(--CTAorange);
+}
+
+
 /*|| Utilities*/
 
 
@@ -126,7 +141,7 @@ li a {
     text-align: center;
     font-family: 'Raleway';
     font-weight: 400;
-    font-size: 1em;
+    font-size: .8em;
     
     width: fit-content;
     height: fit-content;
@@ -141,21 +156,6 @@ li a {
     background-color: transparent;
     
 }
-
-.card {
-    flex-direction: column;
-    margin: 2rem;
-}
-
-details > summary{
-    list-style: none;
-    cursor: pointer;
-}
-
-details > p {
-    font-size: .75rem;
-}
-
 .no-underline {
     text-decoration: none;
 }
@@ -166,7 +166,7 @@ details > p {
 }
 
 .material-icons.md-48 {
-    font-size: 48px;
+    font-size: 4rem;
 }
 
 
@@ -196,6 +196,7 @@ details > p {
 
 .top-nav ul {
     justify-content: flex-end;
+    padding-right: .5rem;
 }
 
 .top-nav a {
@@ -256,7 +257,7 @@ details > p {
     
     grid-area: 5 /  5 / 5 / 6;
     
-    border: 2px solid var(--CTAyellow);
+    border: .1em solid var(--CTAyellow);
 
     color: black;
 
@@ -285,7 +286,7 @@ details > p {
     grid-area: 5 /  2 / 5 / 3;
 
     
-    border: 0.05rem solid #FDB812;
+    border: 0.05em solid #FDB812;
     color: white;
 
     
@@ -310,31 +311,25 @@ details > p {
 
 section {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 section:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-section div {
+section > div {
     width: 50%;
 }
 
 section div.text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 2rem;
+    padding: 2rem 4rem;
 }
 
 section div.section-title {
     height: 100vh;
     display: grid;
-    gap: .5rem;
-    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
 
     padding: 1.5rem 3rem;
 
@@ -350,13 +345,13 @@ section div.section-title {
 
 
 .section-heading {
-    grid-area: 3 /  1 / 5 / 4;
+    grid-area: 4 /  1 / 5 / 4;
     padding-left: 1rem;
 }
 
 .section-nav {
     
-    grid-area: 6 /  1 / 7 / 7;
+    grid-area: 7 /  1 / 7 / 7;
     align-self: end;
 }
 
@@ -380,6 +375,51 @@ section div.section-title {
 
 }
 
+
+.cards {
+    grid-template: repeat(2, 2fr) / (2, 2fr);
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 2rem;
+    padding: 1rem;
+
+
+    width: 20rem;
+}
+
+details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+details > summary{
+    list-style: none;
+    cursor: pointer;
+}
+
+details > p {
+    font-size: 1.3rem;
+}
+
+.icon-orange {
+    color: var(--CTAorange);
+}
+
+.material-icons.md-48 {
+    font-size: 4.8rem;
+}
+
+
 /*|| About section*/
 
 .about-title {
@@ -399,7 +439,7 @@ section div.section-title {
 /*|| Media queries*/
 
 
-@media (max-width: 900px){
+@media (max-width: 768px){
 
     .page-hero {
         display: block;
@@ -424,12 +464,19 @@ section div.section-title {
 
     section div {
         width: 100%;
-        height: 50%;
     }
 
     section div.section-title {
         position: static;
-        height: 50%;
+    }
+
+    
+    .about-heading {
+        text-align: center;
+    }
+
+    .contact-heading {
+        text-align: center;
     }
 
     .nav-menu {
