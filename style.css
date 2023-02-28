@@ -38,7 +38,6 @@ body {
 
   .flex-container {
     display: flex;
-    flex-flow: row wrap;
   }
 
   .grid-container {
@@ -74,6 +73,8 @@ h2 {
 
 h3 {
     font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+    padding: 5rem;
+    text-align: center;
 }
 
 h4 {
@@ -146,7 +147,7 @@ li a {
     width: fit-content;
     height: fit-content;
 
-    border-radius: 0.75em;
+    border-radius: 1rem;
 
     white-space: nowrap;
     
@@ -165,9 +166,15 @@ li a {
     color: var(--CTAorange);
 }
 
-.material-icons.md-48 {
-    font-size: 4rem;
+.icon-white {
+    color: white;
 }
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 
 
@@ -377,7 +384,11 @@ section div.section-title {
 
 
 .cards {
-    grid-template: repeat(2, 2fr) / (2, 2fr);
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -393,7 +404,55 @@ section div.section-title {
     padding: 1rem;
 
 
-    width: 20rem;
+    width: 25rem;
+    height: 25rem;
+
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+
+    transition:all 0.3s ease-in-out;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 6rem;
+    width: 100%;
+    max-width: 6rem;
+
+
+    border-radius: 100%;
+    background: linear-gradient(90deg, #FE7805 -0.45%, #FDB812 99.55%);
+
+    transition: all 0.5s ease-in;
+}
+
+.card-title {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 1.4rem;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+}
+
+.card:hover {
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.24);
+}
+
+.card:hover .card-text {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    
+
 }
 
 details {
@@ -403,20 +462,19 @@ details {
 }
 
 details > summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    
     list-style: none;
-    cursor: pointer;
+
 }
 
 details > p {
     font-size: 1.3rem;
-}
-
-.icon-orange {
-    color: var(--CTAorange);
-}
-
-.material-icons.md-48 {
-    font-size: 4.8rem;
 }
 
 
